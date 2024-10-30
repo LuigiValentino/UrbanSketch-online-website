@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanSketch online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./sources/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>UrbanSketch online <i class="fas fa-map"></i></h1>
+        <p>1.0 - <a href="https://github.com/LuigiValentino">Github</a></p>
+    </div>
+    <div class="main-layout">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h2>Elementos Básicos</h2>
+                <button onclick="addStreet()"><i class="fas fa-road"></i> Calle</button>
+                <button onclick="addRectangularBuilding()"><i class="fas fa-building"></i> Edificio</button>
+                <button onclick="addLargeBuilding()"><i class="fas fa-building"></i> Edificio Grande</button>
+                <button onclick="addLShapedBuilding()"><i class="fas fa-building"></i> Edificio en L</button>
+                <button onclick="addUShapedBuilding()"><i class="fas fa-building"></i> Edificio en U</button>
+                <button onclick="addTShapedBuilding()"><i class="fas fa-building"></i> Edificio en T</button>
+                <button onclick="addHShapedBuilding()"><i class="fas fa-building"></i> Edificio en H</button>
+                <button onclick="addPlaza()"><i class="fas fa-tree"></i> Plaza</button>
+            </div>
+            <hr>
+            <div class="sidebar-section">
+                <h2>Vegetación</h2>
+                <button onclick="addTree()"><i class="fas fa-tree"></i> Árbol</button>
+                <button onclick="addGrassArea()"><i class="fas fa-leaf"></i> Área de Césped</button>
+                <button onclick="addPark()"><i class="fas fa-tree"></i> Parque</button>
+            </div>
+            <hr>
+            <div class="sidebar-section">
+                <h2>Transporte</h2>
+                <button onclick="addMetroLine()"><i class="fas fa-subway"></i> Línea de Metro</button>
+                <button onclick="addTrainLine()"><i class="fas fa-train"></i> Línea de Tren</button>
+                <button onclick="addBusLine()"><i class="fas fa-bus"></i> Línea de Autobús</button>
+                <button onclick="addAirport()"><i class="fas fa-plane"></i> Aeropuerto</button>
+                <button onclick="addTransportStation()"><i class="fas fa-bus"></i> Estación de Transporte</button>
+            </div>
+            <hr>
+            <div class="sidebar-section">
+                <h2>Zonas Especiales</h2>
+                <button onclick="addCommercialZone()"><i class="fas fa-store"></i> Zona Comercial</button>
+                <button onclick="addParkingLot()"><i class="fas fa-parking"></i> Estacionamiento</button>
+                <button onclick="addRecreationCenter()"><i class="fas fa-futbol"></i> Centro Recreativo</button>
+            </div>
+            <hr>
+            <div class="sidebar-section">
+                <h2>Texto y Fondo</h2>
+                <button onclick="addText()"><i class="fas fa-font"></i> Añadir Texto</button>
+                <button onclick="clearCanvas()"><i class="fas fa-trash"></i> Borrar Lienzo</button>
+                <button onclick="exportCanvas()"><i class="fas fa-download"></i> Guardar Imagen</button>
+                <div class="color-picker">
+                    <label for="backgroundColor"><h3>Fondo: </h3></label>
+                    <input type="color" id="backgroundColor" value="#e0f7ff" onchange="changeBackgroundColor()">
+                </div>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="urbanCanvas" width="1560" height="800"></canvas>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
